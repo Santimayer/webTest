@@ -1,0 +1,166 @@
+header h1 {
+    font-size: 70px;
+    font-weight: 600;
+
+    background-image: linear-gradient(to left, #c800ff, #030073);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+
+    text-align: center;
+    opacity: 100%;
+    position: relative;
+    top: 100px; left: 0%;
+    animation: sus 2.7s both; /* Aumentar el tiempo total de la animación para incluir la espera */
+    font-family: "Times New Roman";
+    margin: auto;
+    margin-top: 20px;
+}
+
+header {
+    padding-bottom: 70px;
+    margin: auto;
+    animation: colorear 2.7s both;
+}
+
+@keyframes colorear {
+    0% {
+        background-color: transparent;
+    }
+    50%{
+        background-color: transparent;
+    }
+    74% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: beige;
+    }
+}
+
+@keyframes sus {
+    0% {
+        transform: translateY(-100%);
+        font-size: 70px; /* Tamaño de fuente inicial */
+    }
+
+    50% {
+        transform: translateY(0); /* Mover el texto a su posición final en el 74% del tiempo */
+        font-size: 70px; /* Mantener el tamaño de la fuente hasta este punto */
+    }
+
+    74% {
+        transform: translateY(-80%); /* Mantener la posición final */
+        font-size: 50px; /* Cambiar el tamaño de la fuente después de la espera */
+
+    }
+    100% {
+        transform: translateY(-60%);
+        font-size: 50px;
+
+    }
+}
+
+@keyframes subtitleAnimation {
+    0% {
+        transform: translateY(-500px);
+        font-size: 30px; /* Tamaño de fuente inicial */
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(0); /* Mover el texto a su posición final en el 74% del tiempo */
+        font-size: 30px; /* Mantener el tamaño de la fuente hasta este punto */
+        opacity: 0;
+    }
+
+    74% {
+        transform: translateY(-430%); /* Mantener la posición final */
+        font-size: 20px; /* Cambiar el tamaño de la fuente después de la espera */
+        opacity: 0%;
+    }
+
+    100% {
+
+        transform: translateY(-100%);
+        font-size: 20px; /* Cambiar el tamaño de la fuente después de la espera */
+        opacity: 1;
+    }
+}
+header h3 {
+    font-size: 30px;
+    font-weight: 600;
+    /*background-image: linear-gradient(to left, #c800ff, #030073);
+    color: transparent;*/
+    text-align: center;
+    opacity: 100%;
+    position: static;
+    animation: subtitleAnimation 2.7s both;
+    margin: auto;
+    background-color: transparent;
+}
+
+
+
+#center{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+* {
+    font-family: "Arial", system-ui, -apple-system, system-ui, sans-serif;
+}
+
+#inicio {
+    padding-left: 4cm;
+    padding-right: 4cm;
+    margin: auto;
+    animation: desvanecer 2.7s both;
+}
+
+@keyframes desvanecer {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    74% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#intro {
+    font-size: 20px;
+    text-align: center;
+
+}
+
+#reservation{
+    background-image: linear-gradient(to left, #c800ff, #030073);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
+    opacity: 100%;
+    position: relative;
+    top: 100px; left: 0%;
+    animation: subtitleAnimation 2.7s both; /* Aumentar el tiempo total de la animación para incluir la espera */
+    font-family: "Times New Roman";
+    margin: auto;
+    margin-top: 20px;
+}
+
+#iniciocopy{
+    margin: auto;
+    padding: 60px 0;
+    animation: desvanecer 2.7s both;
+}
