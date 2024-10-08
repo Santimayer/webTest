@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página sobre Inteligencia Artificial</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .box {
+            background-color: #ccbdff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+        .justificar {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: auto; /* or any other percentage */
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <a href="#" class="nav-brand">Inicio</a>
+    <ul class="nav-list">
+        <li><a href="testia.html">Prueba</a></li>
+        <li><a href="leaderboard.html">IAs Populares</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+    </ul>
+</nav>
+<header>
+    <h1>Inteligencia Artificial (IA)</h1>
+</header>
+<main>
+    <section class="box">
+        <h2>¿Que es la Inteligencia Artificial?</h2>
+        <p>
+            La inteligencia artificial (IA) es un campo de la informática que se centra en crear sistemas que puedan realizar tareas que normalmente requieren inteligencia humana.
+        </p>
+        <p>
+            Se basa en la combinación de algoritmos para crear máquinas que tengan capacidades similares a las de los seres humanos.
+        </p>
+    </section>
+    <section class="box">
+        <h2>Usos Mas Comunes de la IA </h2>
+        <ul>
+            <li>Sistemas Automatizados</li>
+            <li>Campo de la Robotica</li>
+            <li>Videojuegos</li>
+            <li>Campos de Informatica </li>
+            <li>Recabacion de Informacion por parte de Usuarios</li>
+            <h2>Ejemplos</h2>
+            <li>Asistentes Virtuales</li>
+            <img src="../images/Alexa.jpg" height="100" width="180"/>
+            <li>Deepfake</li>
+            <img src="../images/Deepfake.jpg" height="100" width="150"/>
+            <li>Reconocimiento de objetos y escenas</li>
+            <img src="images/openCV.jpg" height="150" width="230"/>
+        </ul>
+    </section>
+    <section class="box">
+        <h2>La Importancia de la IA</h2>
+        <p>
+            Automatiza el aprendizaje ademas de analizar datos e informacion con precision ademas de adaptarse a algunos algoritmos de aprendizaje.
+        </p>
+        <p>
+            En Algun futuro la IA sera capaz de crear aun mas sistemas funcionales y mejor hechos para la comodidad humana.
+        </p>
+
+    </section>
+</main>
+<footer>
+    <address>
+        <p>
+            <a href="Contacto.html">Contacto aqui <--</a>
+        </p>
+    </address>
+</footer>
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyBOWHnjRYX8AKvw_P5y7QwRgfAROX4aT2A",
+        authDomain: "iaweb-7bd59.firebaseapp.com",
+        projectId: "iaweb-7bd59",
+        storageBucket: "iaweb-7bd59.appspot.com",
+        messagingSenderId: "445182296890",
+        appId: "1:445182296890:web:a192e8764e84eaf584c603",
+        measurementId: "G-TPSXLV0RFC"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+</script>
+</html>

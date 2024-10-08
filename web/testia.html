@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Establece la codificación de caracteres a UTF-8 -->
+    <meta charset="utf-8">
+
+    <!-- Modo de compatibilidad para Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Configura la vista para que sea responsive en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Información meta sobre la generación del andamiaje -->
+    <meta name="scaffolded-by" content="https://github.com/dart-lang/sdk">
+
+    <!-- Título de la página -->
+    <title>actint</title>
+
+    <!-- Enlaza el archivo de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Enlaza y ejecuta el script Dart -->
+    <script defer src="main.dart.js"></script>
+</head>
+<body>
+<!-- Barra de navegación -->
+<nav class="navbar">
+    <a href="index.html" class="nav-brand">Inicio</a>
+    <ul class="nav-list">
+        <li><a href="#">Prueba</a></li>
+        <li><a href="leaderboard.html">IAs Populares</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+    </ul>
+</nav>
+
+<!-- Contenedor principal para salida -->
+<div id="output"></div>
+
+<!-- Encabezado principal que da una introducción -->
+<h1 id="texto">
+    Prueba la inteligencia artificial de Google
+</h1>
+
+<!-- Párrafo que da instrucciones al usuario -->
+<p id="texto">Introduce un mensaje y da click en enviar para genererar una respuesta de Gemini.</p>
+
+<!-- Contenedor para la interfaz de usuario -->
+<div id="userint">
+    <!-- Campo de entrada de texto para instrucciones del usuario -->
+    <input id="entrada" type="text" placeholder="Ingresa una instruccion aquí">
+    <!-- Botón para enviar la instrucción -->
+    <button id="boton">Enviar</button>
+</div>
+
+<!-- Párrafo para mostrar la respuesta generada -->
+<p id="respuesta"></p>
+
+<!-- Información adicional sobre el uso de Gemini -->
+<div id="lowtext">
+    Utilizando Gemini 1.0 Pro (no guarda contexto)
+    <!-- Nota sobre la capacidad de acceso a información en tiempo real -->
+    <div id="nano">No puede acceder a informacion en tiempo real</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+body {
+  font-family: 'Roboto', sans-serif; /* Google's font */
+  margin: 0;
+  padding: 0; /* Light grey background */
+  color: #000000; /* Dark grey text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(14,36,85);
+  background: linear-gradient(170deg, rgba(14,36,85,1) 33%, rgba(8,101,157,1) 72%, rgba(0,212,255,1) 100%);
+}
+
+nav.navbar {
+  background-color: rgba(72, 0, 236, 0.9); /* Google blue with slight transparency */
+  width: 100%;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.34);
+  display: flex;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center;
+}
+
+nav.navbar a.nav-brand {
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: auto; /* Empuja los elementos a la izquierda */
+}
+
+nav.navbar ul.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+nav.navbar ul.nav-list li {
+  display: inline;
+}
+
+nav.navbar ul.nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+nav.navbar ul.nav-list li a:hover {
+  color: #FFA726; /* Lighter shade on hover */
+}
+
+/* Continúa con el estilo anterior */
+.gradient-text {
+  background: linear-gradient(to right, #4285F4, #EA4335); /* Blue to Red-Orange */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold; /* Make keywords stand out */
+}
+
+#output { /* Container for Gemini output */
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.34);
+  margin-bottom: 20px;
+  width: 80%;
+  max-width: 600px;
+  overflow-x: auto; /* For long text */
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1s ease-in-out forwards; /* Fade-in animation */
+  animation-delay: 0.5s; /* Delay the animation slightly */
+}
+
+#texto {
+  text-align: center;
+  padding: 20px;
+}
+
+#respuesta {
+  font-size: 16px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  background-color: #f9f9f9; /* Light grey background for the response box */
+  padding: 15px; /* Add padding inside the box */
+  border-radius: 4px; /* Slightly rounded corners */
+  margin-top: 10px; /* Add some space between the container and the response */
+}
+
+#nano {
+  font-size: 10px;
+}
+
+#lowtext {
+  text-align: center;
+  margin: auto;
+  color: lightgray;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #bfbfbf; /* Google blue */
+  animation: fadeIn 1s ease-in-out;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #777; /* Lighter grey for secondary text */
+  max-width: 600px;
+}
+
+a {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #777; /* Lighter grey for secondary text */
+  max-width: 600px;
+}
+
+#userint {
+  display: flex;
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 20px; /* Added margin */
+}
+
+#entrada {
+  flex-grow: 1;
+  padding: 15px;
+  border: 2px solid rgba(75, 0, 130, 0); /* Light grey border */
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+  outline: none; /* Remove default focus outline */
+  /* Smooth border color change on focus */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+#entrada:focus {
+  border-color: #4285F4;
+  box-shadow: 0 0 5px rgba(66,133,244, 0.3); /* Subtle blue glow on focus */
+}
+
+#boton {
+  background-color: #4285F4; /* Google blue */
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-size: 16px; /* Smooth background color change on hover */
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#boton:hover {
+  background-color: #3367D6;
+  transform: scale(1.05); /* Slight scale-up on hover */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Example usage of gradient text */
+#texto:first-of-type { /*Apply to the first h1 only */
+  display: inline-flex; /* To prevent gradient from overflowing */
+}
+#texto:first-of-type span {
+  display: inline-block; /* Required for gradient on inline elements */
+}
+
+#texto:first-of-type span:first-of-type {
+  margin-right: 5px; /* Small space between words */
+}
+
+.google-logo-text {
+  background: linear-gradient(to right, #4285f4, #ea4335, #fbbc05, #4285f4, #34a853,  #ea4335);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  background-size: 200%; /* Adjust this to control the gradient repeat */
+  background-position: 0 0;
+  animation: gradientAnimation 2s both; /* Add animation */
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 0%; }
+  100% { background-position: -0% 0%; } /* Move gradient twice its width */
+}
+
+. {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
