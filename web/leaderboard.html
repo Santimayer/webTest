@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página sobre Inteligencia Artificial</title>
+  <title>IAs Populares</title>
   <link rel="stylesheet" href="styles.css">
   <style>
+    /* ... otros estilos ... */
     .box {
       background-color: white;
       border-radius: 15px;
@@ -14,14 +14,73 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       margin: 20px;
     }
+    .boxflex {
+      background-color: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      display: flex;
+    }
     .justificar {
       display: block;
       margin-left: auto;
       margin-right: auto;
       width: auto; /* or any other percentage */
     }
+    /* Estilos para los acordeones */
+    .accordion {
+      display: block;
+      background-color: #eee; /* Gris claro para el fondo */
+      color: #333; /* Texto oscuro */
+      cursor: pointer;
+      padding: 18px;
+      width: 100%; /* Ajustar al ancho del contenedor */
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+      border-radius: 8px; /* Bordes ligeramente redondeados */
+      margin-bottom: 20px; /* Espacio entre acordeones */
+    }
+
+    .active, .accordion:hover {
+      background-color: #ddd; /* Gris más oscuro al pasar el ratón o estar activo */
+    }
+
+    .panel {
+      padding: 0 18px;
+      background-color: white;
+      display: none;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-in-out;
+      border-radius: 20px; /* Bordes redondeados solo en la parte inferior */
+      margin-bottom: 10px; /* Espacio entre acordeones */
+    }
+    /* Centra las imágenes y ajusta el tamaño */
+    .panel img {
+      display: block;
+      margin: 10px auto; /* Centrar */
+      max-width: 80%; /* Ajustar tamaño */
+      height: auto;
+      opacity: 1;
+      transform: translateY(-10px);
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+    .panel.show {
+      max-height: 500px;
+    }
+
+    .panel.show img {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
+
 <body>
 <nav class="navbar">
   <a href="index.html" class="nav-brand">Inicio</a>
@@ -31,87 +90,105 @@
     <li><a href="Contacto.html">Contacto</a></li>
   </ul>
 </nav>
+
 <header>
   <h1>Lista de Inteligencias Artificiales populares</h1>
 </header>
+
 <main>
-  <h2 class="box" style="text-align: center; color: #000000">Herramientas de generación de contenido:</h2>
-  <section class="box">
-    <h2><a href="https://chatgpt.com/">ChatGPT</a></h2>
-    <p>
-      Un modelo de lenguaje grande desarrollado por OpenAI que puede generar texto humano de alta calidad, responder preguntas, escribir código, crear contenido creativo y mucho más.
+  <section class="boxflex">
+    <img src="images/leaderboard.svg" width="100" height="100">
+    <p style="text-align: center;">
+      La Inteligencia Artificial está transformando el mundo a un ritmo acelerado. Cada día surgen nuevas herramientas y aplicaciones basadas en IA que facilitan nuestras vidas y revolucionan industrias enteras. Pero, ¿cuáles son las IA más populares en este momento?
     </p>
-    <img class="justificar" src="images/chatgpt.webp" height="128" width="128" style="">
   </section>
-  <section class="box">
-    <h2><a href="https://www.midjourney.com/home">Midjourney</a></h2>
-    <p>
-      Un laboratorio de investigación independiente que ha desarrollado un programa que crea imágenes a partir de descripciones textuales. Es una herramienta muy popular entre artistas y diseñadores.
-    </p>
-    <img class="justificar" src="images/Midjourney.jpeg" width="128" height="128">
-  </section>
-  <section class="box">
-    <h2><a href="https://gemini.google.com">Gemini</a></h2>
-    <p>
-      Un modelo de lenguaje de Google AI que se espera que sea un modelo multi-modal capaz de generar texto, imágenes, código y más, con un rendimiento superior al de los modelos anteriores.
-    </p>
-    <img class="justificar" src="images/Gemini-Logo.png" width="300" height="168">
-  </section>
-  <section class="box">
-    <h2>Aplicaciones prácticas de IA:</h2>
-  </section>
+  <p style="display: flex">(Son botones)</p>
+  <button class="accordion">Herramientas de generación de contenido</button>
+  <div class="panel show">
+    <section class="box">
+      <h2><a href="https://chatgpt.com/">ChatGPT</a></h2>
+      <p>Es un modelo de lenguaje de gran tamaño capaz de generar texto similar al humano. Puede mantener conversaciones, traducir idiomas, escribir diferentes tipos de contenido creativo, y responder a tus preguntas de manera informativa.</p>
+      <img src="images/chatgpt.webp" alt="ChatGPT Logo" width="128" height="128">
+    </section>
+    <section class="box">
+      <h2><a href="https://www.midjourney.com/home">Midjourney</a></h2>
+      <p>Esta herramienta se especializa en la generación de imágenes a partir de descripciones textuales. Puedes describir la imagen que quieres y Midjourney la creará para ti. Es ideal para diseñadores, artistas y cualquier persona que quiera crear imágenes únicas y personalizadas.</p>
+      <img src="images/Midjourney.jpeg" alt="Midjourney Logo" width="128" height="128">
+    </section>
+    <section class="box">
+      <h2><a href="https://gemini.google.com">Gemini</a></h2>
+      <p>Es una familia de modelos de lenguaje de gran tamaño desarrollada por Google AI. Gemini es capaz de realizar una amplia gama de tareas, incluyendo generación de texto, traducción de idiomas, escritura de código, y mucho más. Es una de las herramientas de IA más avanzadas en la actualidad.</p>
+      <img src="images/Gemini-Logo.png" alt="Gemini Logo" width="300" height="168">
+    </section>
+  </div>
 
-  <section class="box">
-    <h2><a href="https://grammarly.com">Grammarly</a></h2>
-    <p>
-      Una herramienta de escritura asistida por IA que ayuda a mejorar la gramática, la puntuación y la elección de palabras en tus textos.
-    </p>
-    <img class="justificar" src="images/grammarly.jpeg" height="128" width="128">
-  </section>
+  <button class="accordion">Aplicaciones prácticas de IA</button>
+  <div class="panel show">
+    <section class="box">
+      <h2><a href="https://grammarly.com">Grammarly</a></h2>
+      <p>Esta herramienta te ayuda a mejorar tu escritura en inglés. Corrige errores gramaticales, ortográficos y de puntuación, y te sugiere alternativas para mejorar el estilo de tu texto. Es muy útil para estudiantes, profesionales y cualquier persona que quiera comunicarse de manera efectiva en inglés.</p>
+      <img src="images/grammarly.jpeg" alt="Grammarly Logo" width="128" height="128">
+    </section>
+    <section class="box">
+      <h2><a href="https://deepl.com">DeepL</a></h2>
+      <p>Es un servicio de traducción automática que utiliza la inteligencia artificial para ofrecer traducciones de alta calidad. Soporta una amplia variedad de idiomas y es conocido por su precisión y fluidez. Es una excelente opción para traducir textos largos o documentos completos.</p>
+      <img src="images/deepl.jpeg" alt="DeepL Logo" width="128" height="128">
+    </section>
+    <section class="box">
+      <h2><a href="https://jasper.ai">Jasper.ai</a></h2>
+      <p>Esta herramienta está diseñada para ayudar a las personas a crear contenido escrito de manera más rápida y eficiente. Puede generar ideas, escribir borradores y reescribir textos existentes. Es muy útil para escritores, blogueros y profesionales del marketing.</p>
+      <img src="images/jasper-jarvis.jpg" alt="Jasper.ai Logo" width="128" height="128">
+    </section>
+  </div>
 
-  <section class="box">
-    <h2><a href="https://deepl.com">DeepL</a></h2>
-    <p>
-      Un servicio de traducción automática neuronal que ofrece traducciones de alta calidad en muchos idiomas.
-    </p>
-    <img class="justificar" src="images/deepl.jpeg" height="128" width="128">
-  </section>
 
-  <section class="box">
-    <h2><a href="https://jasper.ai">Jasper.ai</a></h2>
-    <p>
-      Una plataforma de escritura asistida por IA que te ayuda a generar contenido para blogs, redes sociales y otros fines.
-    </p>
-    <img class="justificar" src="images/jasper-jarvis.jpg" height="128" width="128">
-  </section>
+  <button class="accordion">Herramientas para desarrolladores</button>
+  <div class="panel show">
+    <section class="box">
+      <h2><a href="https://huggingface.co/">Hugging Face</a></h2>
+      <p>Es una comunidad de desarrolladores que comparten y colaboran en proyectos de inteligencia artificial. Hugging Face es un excelente recurso para aquellos que quieren aprender más sobre el procesamiento del lenguaje natural y la IA.</p>
+      <img src="images/HuggingFace.jpeg" alt="Hugging Face Logo" height="90" width="150">
+    </section>
+    <section class="box">
+      <h2><a href="https://colab.research.google.com/">Google Colaboratory</a></h2>
+      <p>Es una plataforma gratuita de Google que te permite ejecutar código Python en la nube. Es muy útil para experimentar con modelos de aprendizaje automático y realizar análisis de datos.</p>
+      <img src="images/Google_Colaboratory_SVG_Logo.svg" alt="Google Colaboratory Logo" height="128" width="128">
+    </section>
+  </div>
 
-  <section class="box">
-    <h2>Herramientas para desarrolladores:</h2>
-  </section>
-
-  <section class="box">
-    <h2><a href="https://huggingface.co/">Hugging Face</a></h2>
-    <p>
-      Una comunidad abierta de código abierto que alberga miles de modelos de aprendizaje automático preentrenados. Es una excelente opción para desarrolladores que buscan construir sus propias aplicaciones de IA.
-    </p>
-    <img class="justificar" src="images/HuggingFace.jpeg" height="90" width="150">
-  </section>
-
-  <section class="box">
-    <h2>
-      <a href="https://colab.research.google.com/">
-      Google Colaboratory
-      </a>
-    </h2>
-    <p>
-      Una plataforma de notebook gratuita basada en la nube que utiliza TensorFlow. Permite ejecutar código Python y acceder a
-      GPUs de forma gratuita, lo que la hace ideal para experimentar con modelos de aprendizaje profundo.
-    </p>
-    <img class="justificar" src="images/Google_Colaboratory_SVG_Logo.svg" height="128" width="128">
-  </section>
 </main>
+
+
+
 <footer>
   <a href="https://github.com/santimayer">github.com/santimayer</a>
 </footer>
+
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+        panel.classList.remove("show"); // Elimina la clase "show"
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px"; // Ajusta la altura al contenido
+        panel.classList.add("show"); // Añade la clase "show" para la animación de las imágenes
+
+      }
+    });
+  }
+
+</script>
 </body>
 </html>

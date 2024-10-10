@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +7,83 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         .box {
-            background-color: #ccbdff;
+            background-color: #ffffff;
             border-radius: 15px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin: 20px;
         }
+
         .justificar {
             display: block;
             margin-left: auto;
             margin-right: auto;
             width: auto; /* or any other percentage */
         }
+
+        .collapsible {
+            background-color: #7755cc;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        .content {
+            padding: 0px;
+            display: none;
+            overflow: hidden;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+        }
+
+        .active, .collapsible:hover {
+            background-color: #4C3B8A;
+        }
+
+        @keyframes slideDown {
+            from {
+                max-height: 0;
+                opacity: 0;
+            }
+            to {
+                max-height: 1000px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                max-height: 1000px;
+                opacity: 1;
+            }
+            to {
+                max-height: 0;
+                opacity: 0;
+            }
+        }
+
+        .collapsible-content-animation {
+            transition: max-height 0.5s ease-out;
+        }
+
+        .open {
+            animation: slideDown 0.5s forwards;
+        }
+
+        .close {
+            animation: slideUp 0.5s forwards;
+        }
     </style>
+    <link rel="stylesheet" href="phone.css">
 </head>
 <body>
-<nav class="navbar">
+<nav class="navbar" >
     <a href="#" class="nav-brand">Inicio</a>
     <ul class="nav-list">
         <li><a href="testia.html">Prueba</a></li>
@@ -32,11 +92,13 @@
     </ul>
 </nav>
 <header>
-    <h1>Inteligencia Artificial (IA)</h1>
+    <h1 style="font-size: 30pt">Inteligencia Artificial (IA)</h1>
 </header>
 <main>
     <section class="box">
-        <h2>¿Que es la Inteligencia Artificial?</h2>
+        <h2 style="font-size: 40pt; white-space: pre-line;">¿Que es la
+            Inteligencia Artificial?</h2>
+        <img src="images/redesneuronales.avif" id="redespos" height="200" width="200" class="justificar">
         <p>
             La inteligencia artificial (IA) es un campo de la informática que se centra en crear sistemas que puedan realizar tareas que normalmente requieren inteligencia humana.
         </p>
@@ -44,32 +106,92 @@
             Se basa en la combinación de algoritmos para crear máquinas que tengan capacidades similares a las de los seres humanos.
         </p>
     </section>
-    <section class="box">
-        <h2>Usos Mas Comunes de la IA </h2>
-        <ul>
-            <li>Sistemas Automatizados</li>
-            <li>Campo de la Robotica</li>
-            <li>Videojuegos</li>
-            <li>Campos de Informatica </li>
-            <li>Recabacion de Informacion por parte de Usuarios</li>
-            <h2>Ejemplos</h2>
-            <li>Asistentes Virtuales</li>
-            <img src="../images/Alexa.jpg" height="100" width="180"/>
-            <li>Deepfake</li>
-            <img src="../images/Deepfake.jpg" height="100" width="150"/>
-            <li>Reconocimiento de objetos y escenas</li>
-            <img src="images/openCV.jpg" height="150" width="230"/>
-        </ul>
-    </section>
-    <section class="box">
-        <h2>La Importancia de la IA</h2>
-        <p>
-            Automatiza el aprendizaje ademas de analizar datos e informacion con precision ademas de adaptarse a algunos algoritmos de aprendizaje.
-        </p>
-        <p>
-            En Algun futuro la IA sera capaz de crear aun mas sistemas funcionales y mejor hechos para la comodidad humana.
-        </p>
 
+    <section class="box">
+
+        <h2 style="font-size: 40pt; white-space: pre-line;">¿Donde la podemos
+            encontrar?</h2>
+        <p style="color: black">
+            La inteligencia artificial (IA) está transformando nuestra vida diaria. Desde nuestros teléfonos hasta la medicina, la IA está presente en muchos aspectos. Algunos ejemplos comunes son:
+        </p>
+        <button type="button" class="collapsible">
+            Usos Mas Comunes de la IA
+        </button>
+        <div class="content collapsible-content-animation">
+            <ul style="padding: 0%">
+                <h2>Ejemplos</h2>
+                <li>
+                    <h3>
+                        Asistentes Virtuales
+                    </h3>
+                    <p>Alexa y Google Assistant son ejemplos de IA que responden a nuestras preguntas y realizan tareas.</p>
+                </li>
+                <img src="images/Alexa.jpg" height="100" width="180" />
+                <li>
+                    <h3>
+                        Recomendaciones Personalizadas
+                    </h3>
+                    <p>
+                        Plataformas como Spotify o Netflix utilizan IA para sugerir películas, series o canciones basadas en nuestros gustos.
+                    </p>
+                </li>
+                <img src="images/spotnet.jpeg" height="100" width="150"/>
+                <li>
+                    <h3>
+                        Vehículos autónomos
+                    </h3>
+                    <p>
+                        Coches que se conducen solos gracias a sensores y algoritmos de IA.
+                    </p>
+                </li>
+                <img src="images/autopilot.jpg" height="100" width="300"/>
+                <li>
+                    <h3>
+                        Chatbots
+                    </h3>
+                    <p>
+                        Los chatbot son programas de computadora diseñado para simular conversaciones humanas, ya sea por escrito o por voz. Se utiliza para interactuar con usuarios y brindar información o realizar tareas de manera automatizada.
+                    </p>
+                </li>
+                <img src="images/chatbot0.png" height="100" width="200">
+            </ul>
+        </div>
+    </section>
+
+    <section class="box">
+        <h2 style="font-size: 40pt; white-space: pre-line;">La importancia
+        de la IA</h2>
+        <p>
+            La inteligencia artificial (IA) está revolucionando la forma en que vivimos y trabajamos, ofreciendo soluciones innovadoras a problemas complejos del mundo real. Su importancia radica en su capacidad para:        </p>
+        <ol>
+            <li>
+                <h3>
+                    Automatizar tareas:
+                </h3>
+                <p>
+                    La IA puede realizar tareas repetitivas y rutinarias de manera más eficiente y precisa que los humanos, liberando tiempo para que las personas se enfoquen en actividades más creativas y estratégicas.
+                </p>
+                <img src="images/taskauto.jpeg" height=170 width=300>
+            </li>
+            <li>
+                <h3>
+                    Analizar grandes cantidades de datos
+                </h3>
+                <p>
+                    La IA puede procesar y analizar enormes volúmenes de datos a una velocidad inimaginable, permitiendo identificar patrones y tendencias que serían imposibles de detectar por el ojo humano.
+                </p>
+                <img src="images/database.png" height="150" width="150">
+            </li>
+            <li>
+                <h3>
+                    Aprender y adaptarse(Machine Learning)
+                </h3>
+                <p>
+                    Los algoritmos de aprendizaje automático permiten a las máquinas mejorar su desempeño con el tiempo, aprendiendo de los datos y adaptándose a nuevas situaciones.
+                </p>
+                <img src="images/machinelearning.jpeg" height="170" width="300">
+            </li>
+        </ol>
     </section>
 </main>
 <footer>
@@ -79,6 +201,50 @@
         </p>
     </address>
 </footer>
-</body>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const collapsibles = document.querySelectorAll('.collapsible');
+        collapsibles.forEach((button) => {
+            button.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.classList.remove('open');
+                    content.classList.add('close');
+                    setTimeout(() => {
+                        content.style.display = "none";
+                    }, 500); // duration of animation
+                } else {
+                    content.classList.remove('close');
+                    content.classList.add('open');
+                    content.style.display = "block";
+                }
+            });
+        });
+    });
+</script>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
 
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyBOWHnjRYX8AKvw_P5y7QwRgfAROX4aT2A",
+        authDomain: "iaweb-7bd59.firebaseapp.com",
+        projectId: "iaweb-7bd59",
+        storageBucket: "iaweb-7bd59.appspot.com",
+        messagingSenderId: "445182296890",
+        appId: "1:445182296890:web:a192e8764e84eaf584c603",
+        measurementId: "G-TPSXLV0RFC"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+</script>
+</body>
 </html>

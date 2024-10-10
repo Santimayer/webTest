@@ -1,7 +1,7 @@
 body {
-  font-family: 'Roboto', sans-serif; /* Google's font */
+  font-family: 'Comfortaa', sans-serif; /* Google's font */
   margin: 0;
-  padding: 0; /* Light grey background */
+  padding: 20px; /* Light grey background */
   color: #000000; /* Dark grey text */
   display: flex;
   flex-direction: column;
@@ -19,6 +19,9 @@ nav.navbar {
   display: flex;
   justify-content: center; /* Centra los elementos horizontalmente */
   align-items: center;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
 }
 
 nav.navbar a.nav-brand {
@@ -65,7 +68,7 @@ nav.navbar ul.nav-list li a:hover {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.34);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   width: 80%;
   max-width: 600px;
@@ -86,25 +89,28 @@ nav.navbar ul.nav-list li a:hover {
   white-space: pre-wrap;
   background-color: #f9f9f9; /* Light grey background for the response box */
   padding: 15px; /* Add padding inside the box */
-  border-radius: 4px; /* Slightly rounded corners */
+  border-radius: 8px; /* Slightly rounded corners */
   margin-top: 10px; /* Add some space between the container and the response */
 }
 
 #nano {
   font-size: 10px;
+  margin-top: 5px; /* Espacio entre el texto de Gemini y la nota */
 }
+
 
 #lowtext {
   text-align: center;
   margin: auto;
   color: lightgray;
+  margin-top: 20px;
 }
 
 h1 {
   font-size: 2.5em;
   color: #bfbfbf; /* Google blue */
   animation: fadeIn 1s ease-in-out;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 p {
@@ -113,6 +119,7 @@ p {
   margin-bottom: 20px;
   color: #777; /* Lighter grey for secondary text */
   max-width: 600px;
+  margin-bottom: 20px;
 }
 
 a {
@@ -198,8 +205,18 @@ a {
   100% { background-position: -0% 0%; } /* Move gradient twice its width */
 }
 
-. {
-  display: flex;
+ul{
+  justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+img {
+  border-radius: 20px;
+}
+
+.heap{
   justify-items: center;
+  align-content: center;
+  display: flex;
 }
